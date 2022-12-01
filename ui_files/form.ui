@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>form</class>
+ <widget class="QMainWindow" name="form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>542</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>541</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Ingrese la fecha en la que fue vacunado</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="dniline">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ingrese el DNI</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLineEdit" name="nombreline">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ingrese el nombre</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="apellidoline">
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ingrese el apellido</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QComboBox" name="ciudadseleccion">
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="currentText">
+        <string>seleccione ciudad</string>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContents</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>seleccione ciudad</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La calera</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Villa allende</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Narnia</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="vacunaseleccion">
+       <item>
+        <property name="text">
+         <string>Seleccione la vacuna</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SPUTNIK V(1era dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SPUTNIK V(2da dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ASTRAZENECA(1era dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ASTRAZENECA(2da dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PFIZER(1era dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PFIZER(2da dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MODERNA(1era dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MODERNA(2da dosis)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SINOPHARM(1era dosis) </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SINOPHARM(2da dosis) </string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="botonborrar">
+         <property name="text">
+          <string>Borrar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <widget class="QDateEdit" name="fechaseleccion">
+       <property name="minimumDateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>1921</year>
+         <month>9</month>
+         <day>14</day>
+        </datetime>
+       </property>
+       <property name="maximumDate">
+        <date>
+         <year>2021</year>
+         <month>12</month>
+         <day>31</day>
+        </date>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="botonagregar">
+       <property name="text">
+        <string>agregar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>nombreline</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>form</receiver>
+   <slot>nombre()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>957</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>apellidoline</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>form</receiver>
+   <slot>apellido()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>562</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dniline</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>form</receiver>
+   <slot>dni()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-41</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fechaseleccion</sender>
+   <signal>timeChanged(QTime)</signal>
+   <receiver>form</receiver>
+   <slot>fecha()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ciudadseleccion</sender>
+   <signal>highlighted(QString)</signal>
+   <receiver>form</receiver>
+   <slot>ciudad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>botonborrar</sender>
+   <signal>clicked()</signal>
+   <receiver>form</receiver>
+   <slot>borrar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>658</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>botonagregar</sender>
+   <signal>clicked()</signal>
+   <receiver>form</receiver>
+   <slot>agregar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vacunaseleccion</sender>
+   <signal>highlighted(QString)</signal>
+   <receiver>form</receiver>
+   <slot>dosis()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1074</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>nombre()</slot>
+  <slot>apellido()</slot>
+  <slot>dni()</slot>
+  <slot>dosis()</slot>
+  <slot>fecha()</slot>
+  <slot>ciudad()</slot>
+  <slot>borrar()</slot>
+  <slot>agregar()</slot>
+ </slots>
+</ui>
